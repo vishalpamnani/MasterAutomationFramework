@@ -1,6 +1,8 @@
-package com.zenohealth.config;
+package com.zenohealth.config.factory;
 
 import org.aeonbits.owner.ConfigCache;
+
+import com.zenohealth.config.FrameworkConfig;
 
 public final class ConfigFactory {
 	

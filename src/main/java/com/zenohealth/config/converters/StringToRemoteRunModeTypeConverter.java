@@ -10,7 +10,7 @@ public class StringToRemoteRunModeTypeConverter implements Converter<RemoteRunMo
 
 	@Override
 	public RemoteRunModeType convert(Method method, String remoteMode) {
-		return RemoteRunModeType.valueOf(remoteMode);
+		return RemoteRunModeType.valueOf(remoteMode.toUpperCase());
 	}
 
 }

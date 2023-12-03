@@ -1,13 +1,14 @@
-package com.zenohealth.tests;
+package com.zenohealth.tests.web.base;
 
 import org.testng.annotations.BeforeMethod;
+
+import com.zenohealth.driver.Driver;
 
 public class WebBase {
 	
 	@BeforeMethod
 	public void setup() {
-		
-		
+		Driver.initDriverForWeb();
 		
 	}
 
