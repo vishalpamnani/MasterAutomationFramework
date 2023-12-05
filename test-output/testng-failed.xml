@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.zenohealth.tests.DemoTest">
+      <class name="com.zenohealth.tests.api.ReqresTest">
         <methods>
-          <include name="setup"/>
-          <include name="testLogin"/>
+          <include name="createNewUser"/>
         </methods>
-      </class> <!-- com.zenohealth.tests.DemoTest -->
+      </class> <!-- com.zenohealth.tests.api.ReqresTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
