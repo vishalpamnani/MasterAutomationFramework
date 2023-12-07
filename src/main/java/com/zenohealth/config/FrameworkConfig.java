@@ -17,9 +17,17 @@ import com.zenohealth.config.converters.StringToURLConverter;
 @Config.Sources({
 	"system:properties",
 	"system:env",
-	"file:${user.dir}/src/test/resources/config.properties"
+	"file:${user.dir}/src/test/resources/config.properties",
+	"file:${user.dir}/src/test/resources/staging-config.properties",
+	"file:${user.dir}/src/test/resources/dev-config.properties"
 })
 public interface FrameworkConfig extends Config {
+	
+	@DefaultValue("staging")
+	String environment();
+	
+	@Key("${environment}.weburl")
+	String webUrl();
 	
 	@DefaultValue("CHROME")
 	@ConverterClass(StringToBrowserTypeConverter.class)

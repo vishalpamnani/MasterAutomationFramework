@@ -9,6 +9,7 @@ import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.databind.DatabindException;
 import com.zenohealth.api.ReqresApi;
 import com.zenohealth.api.pojos.UserDetails;
+import com.zenohealth.tests.api.assertwrapper.ResponseAssert;
 import com.zenohealth.tests.api.testdata.UserTestData;
 
 import io.restassured.response.Response;
@@ -35,6 +36,11 @@ public class ReqresTest {
 		Response response = ReqresApi.createUsers(userDetails);
 		
 		//Assertions
+		
+		ResponseAssert.assertThat(response)
+			.statusCodeIs(201);
+		
+		
 	}
 
 }

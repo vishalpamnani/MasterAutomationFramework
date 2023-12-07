@@ -27,8 +27,13 @@ public final class Driver {
 					.build();
 			WebDriver driver = DriverFactory.getDriverForWeb(webDriverData);
 			DriverManager.setDriver(driver);
+			loadURL();
 		}
 
+	}
+	
+	public static void loadURL() {
+		DriverManager.getDriver().get(getConfig().webUrl());
 	}
 
 	public static void initDriverForMobile() {
